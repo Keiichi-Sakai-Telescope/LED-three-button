@@ -1,0 +1,40 @@
+
+step_r=15
+step_w=15
+min_r=720		# minimum current for RED LED [uA]
+min_w=150		# minimum current for WHITE LED [uA]
+max_r=30000		# maximum current for RED LED [uA]
+max_w=90000		# maximum current for WHITE LED [uA]
+sno_r=2			# number of LEDs connected in series
+sno_w=1			# number of LEDs connected in series
+luminance_r=0.25	# luminanc of RED LED [cd]
+luminance_w=24.0	# luminanc of WHITE LED [cd]
+
+scale=20
+coe_r=(l(max_r)-l(min_r))/step_r
+coe_w=(l(max_w)-l(min_w))/step_w
+for(i=0;i<=step_r;i++){
+	scale=20;
+	current=min_r*e(i*coe_r)+0.5;
+	illuminance=luminance_r*sno_r/0.3^2*current/20000+0.005;
+	scale=2;
+	illuminance=illuminance/1.0;
+	scale=0;
+	current=current/1.0;
+	print "LED_R_I",i,"\t\tequ\t",current,"\t; ",illuminance,"lx\n";
+}
+
+for(i=0;i<=step_w;i++){
+	scale=20;
+	current=min_w*e(i*coe_w)+0.5;
+	illuminance=luminance_w*sno_w/0.3^2*current/20000+0.005;
+	scale=2;
+	illuminance=illuminance/1.0;
+	scale=0;
+	current=current/1.0;
+	print "LED_W_I",i,"\t\tequ\t",current,"\t; ",illuminance,"lx\n";
+}
+
+print "\n"
+quit
+

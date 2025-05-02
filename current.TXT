@@ -1,0 +1,256 @@
+  1793  0x700    0x0044                                                
+  1794  0x701    0x0056                                                
+  1795  0x702    0x006F                                                
+  1796  0x703    0x008B         MOVWF INTCON                           
+  1797  0x704    0x00A6         MOVWF 0x26                             
+  1798  0x705    0x00C7         MOVWF 0x47                             
+  1799  0x706    0x00EA         MOVWF 0x6a                             
+  1800  0x707    0x010D                                                
+  1801  0x708    0x0136                                                
+  1802  0x709    0x015F                                                
+  1803  0x70A    0x018A         CLRF PCLATH                            
+  1804  0x70B    0x01B9         CLRF 0x39                              
+  1805  0x70C    0x01E9         CLRF 0x69                              
+  1806  0x70D    0x021A         SUBWF TMR2, W                          
+  1807  0x70E    0x0252         SUBWF 0x52, W                          
+  1808  0x70F    0x0289         SUBWF WREG, F                          
+  1809  0x710    0x02BC         SUBWF 0x3c, F                          
+  1810  0x711    0x0300         DECF INDF0, W                          
+  1811  0x712    0x033C         DECF 0x3c, W                           
+  1812  0x713    0x037A         DECF ADC_OFFSET_L, W                   
+  1813  0x714    0x03BB         DECF 0x3b, F                           
+  1814  0x715    0x0400         IORWF INDF0, W                         
+  1815  0x716    0x0444         IORWF 0x44, W                          
+  1816  0x717    0x048B         IORWF INTCON, F                        
+  1817  0x718    0x04D3         IORWF 0x53, F                          
+  1818  0x719    0x051F         ANDWF CPSCON1, W                       
+  1819  0x71A    0x0570         ANDWF LED_STATE, W                     
+  1820  0x71B    0x05BB         ANDWF 0x3b, F                          
+  1821  0x71C    0x0613         XORWF 0x13, W                          
+  1822  0x71D    0x066E         XORWF 0x6e, W                          
+  1823  0x71E    0x06C7         XORWF 0x47, F                          
+  1824  0x71F    0x0728         ADDWF PORTC_WHITE3_LO, W               
+  1825  0x720    0x06B8         XORWF PORTC_WHITE3_HI, F               
+  1826  0x721    0x072F         ADDWF 0x2f, W                          
+  1827  0x722    0x079C         ADDWF T2CON, F                         
+  1828  0x723    0x081F         MOVF CPSCON1, W                        
+  1829  0x724    0x089B         MOVF PR2, F                            
+  1830  0x725    0x090D         COMF 0xd, W                            
+  1831  0x726    0x0984         COMF FSR0L, F                          
+  1832  0x727    0x09DA         COMF 0x5a, F                           
+  1833  0x728    0x0A68         INCF 0x68, W                           
+  1834  0x729    0x0AE9         INCF 0x69, F                           
+  1835  0x72A    0x0B5B         DECFSZ 0x5b, W                         
+  1836  0x72B    0x0BBE         DECFSZ 0x3e, F                         
+  1837  0x72C    0x0C61         RRF 0x61, W                            
+  1838  0x72D    0x0CD1         RRF 0x51, F                            
+  1839  0x72E    0x0D1D         RLF 0x1d, W                            
+  1840  0x72F    0x0D54         RLF 0x54, W                            
+  1841  0x730    0x0DCF         RLF 0x4f, F                            
+  1842  0x731    0x0E47         SWAPF 0x47, W                          
+  1843  0x732    0x0EC2         SWAPF 0x42, F                          
+  1844  0x733    0x0F40         INCFSZ FLAG_LOW, W                     
+  1845  0x734    0x0FC1         INCFSZ 0x41, F                         
+  1846  0x735    0x1044         BCF 0x44, 0                            
+  1847  0x736    0x10C3         BCF ADCON1_ILED, 0x1                   
+  1848  0x737    0x1148         BCF 0x48, 0x2                          
+  1849  0x738    0x11D2         BCF 0x52, 0x3                          
+  1850  0x739    0x1260         BCF 0x60, 0x4                          
+  1851  0x73A    0x12E5         BCF 0x65, 0x5                          
+  1852  0x73B    0x1378         BCF ILED_AVERAGE_M, 0x6                
+  1853  0x73C    0x1411         BSF PIR1, 0                            
+  1854  0x73D    0x14A5         BSF 0x25, 0x1                          
+  1855  0x73E    0x153D         BSF 0x3d, 0x2                          
+  1856  0x73F    0x15E0         BSF 0x60, 0x3                          
+  1857  0x740    0x0170                                                
+  1858  0x741    0x0192         CLRF PIR2                              
+  1859  0x742    0x01B4         CLRF 0x34                              
+  1860  0x743    0x01D4         CLRF 0x54                              
+  1861  0x744    0x01FD         CLRF 0x7d                              
+  1862  0x745    0x021D         SUBWF 0x1d, W                          
+  1863  0x746    0x0240         SUBWF FLAG_LOW, W                      
+  1864  0x747    0x0261         SUBWF 0x61, W                          
+  1865  0x748    0x0284         SUBWF FSR0L, F                         
+  1866  0x749    0x02AB         SUBWF 0x2b, F                          
+  1867  0x74A    0x02CF         SUBWF 0x4f, F                          
+  1868  0x74B    0x02F2         SUBWF SW_TRANSIENT, F                  
+  1869  0x74C    0x031B         DECF PR2, W                            
+  1870  0x74D    0x0340         DECF FLAG_LOW, W                       
+  1871  0x74E    0x0364         DECF LP_TIME, W                        
+  1872  0x74F    0x038D         DECF 0xd, F                            
+  1873  0x750    0x03B5         DECF 0x35, F                           
+  1874  0x751    0x03DC         DECF 0x5c, F                           
+  1875  0x752    0x0408         IORWF BSR, W                           
+  1876  0x753    0x042F         IORWF 0x2f, W                          
+  1877  0x754    0x045A         IORWF 0x5a, W                          
+  1878  0x755    0x0487         IORWF FSR1H, F                         
+  1879  0x756    0x04B1         IORWF 0x31, F                          
+  1880  0x757    0x04E0         IORWF 0x60, F                          
+  1881  0x758    0x0510         ANDWF LED_STATE_WHITE_MASK, W          
+  1882  0x759    0x053E         ANDWF 0x3e, W                          
+  1883  0x75A    0x0570         ANDWF LED_STATE, W                     
+  1884  0x75B    0x05A2         ANDWF 0x22, F                          
+  1885  0x75C    0x05D6         ANDWF 0x56, F                          
+  1886  0x75D    0x060C         XORWF PORTA, W                         
+  1887  0x75E    0x0644         XORWF 0x44, W                          
+  1888  0x75F    0x0680         XORWF INDF0, F                         
+  1889  0x760    0x047C         IORWF ADC_OFFSET_H, W                  
+  1890  0x761    0x04AA         IORWF 0x2a, F                          
+  1891  0x762    0x04D6         IORWF 0x56, F                          
+  1892  0x763    0x0509         ANDWF WREG, W                          
+  1893  0x764    0x0535         ANDWF 0x35, W                          
+  1894  0x765    0x0564         ANDWF LP_TIME, W                       
+  1895  0x766    0x0597         ANDWF TMR1H, F                         
+  1896  0x767    0x05C7         ANDWF 0x47, F                          
+  1897  0x768    0x05F0         ANDWF LED_STATE, F                     
+  1898  0x769    0x0621         XORWF 0x21, W                          
+  1899  0x76A    0x0650         XORWF 0x50, W                          
+  1900  0x76B    0x0681         XORWF INDF1, F                         
+  1901  0x76C    0x06B0         XORWF PORTC_WHITE1_HI, F               
+  1902  0x76D    0x06DF         XORWF 0x5f, F                          
+  1903  0x76E    0x0710         ADDWF LED_STATE_WHITE_MASK, W          
+  1904  0x76F    0x0742         ADDWF 0x42, W                          
+  1905  0x770    0x0775         ADDWF OFF_TIMER_L, W                   
+  1906  0x771    0x07A6         ADDWF 0x26, F                          
+  1907  0x772    0x07D8         ADDWF 0x58, F                          
+  1908  0x773    0x080A         MOVF PCLATH, W                         
+  1909  0x774    0x083D         MOVF 0x3d, W                           
+  1910  0x775    0x0876         MOVF OFF_TIMER_H, W                    
+  1911  0x776    0x08A7         MOVF 0x27, F                           
+  1912  0x777    0x08E0         MOVF 0x60, F                           
+  1913  0x778    0x0916         COMF TMR1, W                           
+  1914  0x779    0x0952         COMF 0x52, W                           
+  1915  0x77A    0x098A         COMF PCLATH, F                         
+  1916  0x77B    0x09C6         COMF 0x46, F                           
+  1917  0x77C    0x0A06         INCF FSR1L, W                          
+  1918  0x77D    0x0A45         INCF 0x45, W                           
+  1919  0x77E    0x0A86         INCF FSR1L, F                          
+  1920  0x77F    0x0AC9         INCF 0x49, F                           
+  1921  0x780    0x0000         NOP                                    
+  1922  0x781    0x0003                                                
+  1923  0x782    0x0003                                                
+  1924  0x783    0x0001         RESET                                  
+  1925  0x784    0x0001         RESET                                  
+  1926  0x785    0x0001         RESET                                  
+  1927  0x786    0x0003                                                
+  1928  0x787    0x0004                                                
+  1929  0x788    0x0002                                                
+  1930  0x789    0x0004                                                
+  1931  0x78A    0x0005                                                
+  1932  0x78B    0x0008         RETURN                                 
+  1933  0x78C    0x0005                                                
+  1934  0x78D    0x0009         RETFIE                                 
+  1935  0x78E    0x0004                                                
+  1936  0x78F    0x000B         BRW                                    
+  1937  0x790    0x000D                                                
+  1938  0x791    0x000F                                                
+  1939  0x792    0x000F                                                
+  1940  0x793    0x000F                                                
+  1941  0x794    0x000F                                                
+  1942  0x795    0x0010         MOVIW ++FSR0                           
+  1943  0x796    0x0010         MOVIW ++FSR0                           
+  1944  0x797    0x0010         MOVIW ++FSR0                           
+  1945  0x798    0x0010         MOVIW ++FSR0                           
+  1946  0x799    0x0010         MOVIW ++FSR0                           
+  1947  0x79A    0x0010         MOVIW ++FSR0                           
+  1948  0x79B    0x0012         MOVIW FSR0++                           
+  1949  0x79C    0x001F         MOVWI FSR1--                           
+  1950  0x79D    0x0020         MOVLB 0                                
+  1951  0x79E    0x0022         MOVLB 0x2                              
+  1952  0x79F    0x0030         MOVLB 0x10                             
+  1953  0x7A0    0x0022         MOVLB 0x2                              
+  1954  0x7A1    0x0030         MOVLB 0x10                             
+  1955  0x7A2    0x003F         MOVLB 0x1f                             
+  1956  0x7A3    0x0053                                                
+  1957  0x7A4    0x006D                                                
+  1958  0x7A5    0x0090         MOVWF LED_STATE_WHITE_MASK             
+  1959  0x7A6    0x00B9         MOVWF 0x39                             
+  1960  0x7A7    0x00F5         MOVWF OFF_TIMER_L                      
+  1961  0x7A8    0x0133                                                
+  1962  0x7A9    0x017D                                                
+  1963  0x7AA    0x01CD         CLRF 0x4d                              
+  1964  0x7AB    0x0225         SUBWF 0x25, W                          
+  1965  0x7AC    0x0281         SUBWF INDF1, F                         
+  1966  0x7AD    0x02F2         SUBWF SW_TRANSIENT, F                  
+  1967  0x7AE    0x0363         DECF 0x63, W                           
+  1968  0x7AF    0x03D5         DECF 0x55, F                           
+  1969  0x7B0    0x044D         IORWF 0x4d, W                          
+  1970  0x7B1    0x04C1         IORWF 0x41, F                          
+  1971  0x7B2    0x0541         ANDWF 0x41, W                          
+  1972  0x7B3    0x05C2         ANDWF 0x42, F                          
+  1973  0x7B4    0x064C         XORWF 0x4c, W                          
+  1974  0x7B5    0x06D1         XORWF 0x51, F                          
+  1975  0x7B6    0x0765         ADDWF 0x65, W                          
+  1976  0x7B7    0x07F5         ADDWF OFF_TIMER_L, F                   
+  1977  0x7B8    0x0887         MOVF FSR1H, F                          
+  1978  0x7B9    0x0926         COMF 0x26, W                           
+  1979  0x7BA    0x09C9         COMF 0x49, F                           
+  1980  0x7BB    0x0A66         INCF 0x66, W                           
+  1981  0x7BC    0x0B1A         DECFSZ TMR2, W                         
+  1982  0x7BD    0x0BC0         DECFSZ FLAG_LOW, F                     
+  1983  0x7BE    0x0C6C         RRF 0x6c, W                            
+  1984  0x7BF    0x0D34         RLF 0x34, W                            
+  1985  0x7C0    0x0010         MOVIW ++FSR0                           
+  1986  0x7C1    0x0010         MOVIW ++FSR0                           
+  1987  0x7C2    0x0010         MOVIW ++FSR0                           
+  1988  0x7C3    0x0010         MOVIW ++FSR0                           
+  1989  0x7C4    0x0012         MOVIW FSR0++                           
+  1990  0x7C5    0x0019         MOVWI --FSR0                           
+  1991  0x7C6    0x0020         MOVLB 0                                
+  1992  0x7C7    0x002B         MOVLB 0xb                              
+  1993  0x7C8    0x0039         MOVLB 0x19                             
+  1994  0x7C9    0x0049                                                
+  1995  0x7CA    0x005D                                                
+  1996  0x7CB    0x007E                                                
+  1997  0x7CC    0x009A         MOVWF TMR2                             
+  1998  0x7CD    0x00BE         MOVWF 0x3e                             
+  1999  0x7CE    0x00E7         MOVWF 0x67                             
+  2000  0x7CF    0x0119                                                
+  2001  0x7D0    0x0147                                                
+  2002  0x7D1    0x0173                                                
+  2003  0x7D2    0x0180         CLRF INDF0                             
+  2004  0x7D3    0x01A6         CLRF 0x26                              
+  2005  0x7D4    0x01EB         CLRF 0x6b                              
+  2006  0x7D5    0x022D         SUBWF 0x2d, W                          
+  2007  0x7D6    0x0268         SUBWF 0x68, W                          
+  2008  0x7D7    0x02AC         SUBWF 0x2c, F                          
+  2009  0x7D8    0x02F1         SUBWF DEVICE_STATE, F                  
+  2010  0x7D9    0x0339         DECF 0x39, W                           
+  2011  0x7DA    0x0380         DECF INDF0, F                          
+  2012  0x7DB    0x03CC         DECF 0x4c, F                           
+  2013  0x7DC    0x041B         IORWF PR2, W                           
+  2014  0x7DD    0x046F         IORWF 0x6f, W                          
+  2015  0x7DE    0x04C1         IORWF 0x41, F                          
+  2016  0x7DF    0x051C         ANDWF T2CON, W                         
+  2017  0x7E0    0x0200         SUBWF INDF0, W                         
+  2018  0x7E1    0x0241         SUBWF 0x41, W                          
+  2019  0x7E2    0x028B         SUBWF INTCON, F                        
+  2020  0x7E3    0x02CC         SUBWF 0x4c, F                          
+  2021  0x7E4    0x0311         DECF PIR1, W                           
+  2022  0x7E5    0x0358         DECF 0x58, W                           
+  2023  0x7E6    0x039F         DECF CPSCON1, F                        
+  2024  0x7E7    0x03E2         DECF 0x62, F                           
+  2025  0x7E8    0x042E         IORWF 0x2e, W                          
+  2026  0x7E9    0x0472         IORWF SW_TRANSIENT, W                  
+  2027  0x7EA    0x04B9         IORWF 0x39, F                          
+  2028  0x7EB    0x0500         ANDWF INDF0, W                         
+  2029  0x7EC    0x0549         ANDWF 0x49, W                          
+  2030  0x7ED    0x0592         ANDWF PIR2, F                          
+  2031  0x7EE    0x05D9         ANDWF 0x59, F                          
+  2032  0x7EF    0x061F         XORWF CPSCON1, W                       
+  2033  0x7F0    0x066C         XORWF 0x6c, W                          
+  2034  0x7F1    0x06B4         XORWF 0x34, F                          
+  2035  0x7F2    0x0700         ADDWF INDF0, W                         
+  2036  0x7F3    0x0747         ADDWF 0x47, W                          
+  2037  0x7F4    0x0796         ADDWF TMR1, F                          
+  2038  0x7F5    0x07E2         ADDWF 0x62, F                          
+  2039  0x7F6    0x0835         MOVF 0x35, W                           
+  2040  0x7F7    0x0883         MOVF STATUS, F                         
+  2041  0x7F8    0x08D3         MOVF 0x53, F                           
+  2042  0x7F9    0x0928         COMF PORTC_WHITE3_LO, W                
+  2043  0x7FA    0x097B         COMF ADC_OFFSET_M, W                   
+  2044  0x7FB    0x09D1         COMF 0x51, F                           
+  2045  0x7FC    0x0A2C         INCF 0x2c, W                           
+  2046  0x7FD    0x0A88         INCF BSR, F                            
+  2047  0x7FE    0x0AE3         INCF 0x63, F                           
+  2048  0x7FF    0x0B46         DECFSZ 0x46, W                         

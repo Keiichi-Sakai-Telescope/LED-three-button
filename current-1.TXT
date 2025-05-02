@@ -1,0 +1,386 @@
+ Line  Address  Opcode            Label                          Disassembly              
+
+  1665   680     0020                              MOVLB 0                                
+  1666   681     002C                              MOVLB 0xc                              
+  1667   682     003A                              MOVLB 0x1a                             
+  1668   683     0047                                                                     
+  1669   684     005B                                                                     
+  1670   685     0074                                                                     
+  1671   686     0091                              MOVWF PIR1                             
+  1672   687     00AA                              MOVWF 0x2a                             
+  1673   688     00CD                              MOVWF 0x4d                             
+  1674   689     00EE                              MOVWF 0x6e                             
+  1675   68A     0116                                                                     
+  1676   68B     013D                                                                     
+  1677   68C     0169                                                                     
+  1678   68D     0195                              CLRF TMR0                              
+  1679   68E     01C3                              CLRF ADCON1_ILED                       
+  1680   68F     01F5                              CLRF OFF_TIMER_L                       
+  1681   690     0228                              SUBWF PORTC_WHITE3_LO, W               
+  1682   691     025F                              SUBWF 0x5f, W                          
+  1683   692     0296                              SUBWF TMR1, F                          
+  1684   693     02D0                              SUBWF 0x50, F                          
+  1685   694     030D                              DECF 0xd, W                            
+  1686   695     034A                              DECF 0x4a, W                           
+  1687   696     038F                              DECF 0xf, F                            
+  1688   697     03CD                              DECF 0x4d, F                           
+  1689   698     0412                              IORWF PIR2, W                          
+  1690   699     0460                              IORWF 0x60, W                          
+  1691   69A     049B                              IORWF PR2, F                           
+  1692   69B     04FC                              IORWF ADC_OFFSET_H, F                  
+  1693   69C     0548                              ANDWF 0x48, W                          
+  1694   69D     0597                              ANDWF TMR1H, F                         
+  1695   69E     05CB                              ANDWF 0x4b, F                          
+  1696   69F     0629                              XORWF 0x29, W                          
+  1697   6A0     0558                              ANDWF 0x58, W                          
+  1698   6A1     05A1                              ANDWF 0x21, F                          
+  1699   6A2     061F                              XORWF CPSCON1, W                       
+  1700   6A3     0664                              XORWF LP_TIME, W                       
+  1701   6A4     068D                              XORWF 0xd, F                           
+  1702   6A5     06A4                              XORWF 0x24, F                          
+  1703   6A6     071D                              ADDWF 0x1d, W                          
+  1704   6A7     0791                              ADDWF PIR1, F                          
+  1705   6A8     0802                              MOVF PCL, W                            
+  1706   6A9     0870                              MOVF LED_STATE, W                      
+  1707   6AA     08E0                              MOVF 0x60, F                           
+  1708   6AB     0951                              COMF 0x51, W                           
+  1709   6AC     09C4                              COMF 0x44, F                           
+  1710   6AD     0A3A                              INCF 0x3a, W                           
+  1711   6AE     0AAF                              INCF 0x2f, F                           
+  1712   6AF     0B1E                              DECFSZ CPSCON0, W                      
+  1713   6B0     0B90                              DECFSZ LED_STATE_WHITE_MASK, F         
+  1714   6B1     0C10                              RRF LED_STATE_WHITE_MASK, W            
+  1715   6B2     0C85                              RRF FSR0H, F                           
+  1716   6B3     0D02                              RLF PCL, W                             
+  1717   6B4     0D7B                              RLF ADC_OFFSET_M, W                    
+  1718   6B5     0DF7                              RLF ILED_AVERAGE_L, F                  
+  1719   6B6     0E79                              SWAPF ILED_AVERAGE_H, W                
+  1720   6B7     0EFC                              SWAPF ADC_OFFSET_H, F                  
+  1721   6B8     0F7E                              INCFSZ W1, W                           
+  1722   6B9     1006                              BCF FSR1L, 0                           
+  1723   6BA     1092                              BCF PIR2, 0x1                          
+  1724   6BB     1120                              BCF PORTC_WHITE1_LO, 0x2               
+  1725   6BC     11B2                              BCF 0x32, 0x3                          
+  1726   6BD     1246                              BCF 0x46, 0x4                          
+  1727   6BE     12E0                              BCF 0x60, 0x5                          
+  1728   6BF     137C                              BCF ADC_OFFSET_H, 0x6                  
+  1729   6C0     0010                              MOVIW ++FSR0                           
+  1730   6C1     0010                              MOVIW ++FSR0                           
+  1731   6C2     0010                              MOVIW ++FSR0                           
+  1732   6C3     0010                              MOVIW ++FSR0                           
+  1733   6C4     0014                              MOVIW ++FSR1                           
+  1734   6C5     001E                              MOVWI FSR1++                           
+  1735   6C6     0020                              MOVLB 0                                
+  1736   6C7     0020                              MOVLB 0                                
+  1737   6C8     0028                              MOVLB 0x8                              
+  1738   6C9     002F                              MOVLB 0xf                              
+  1739   6CA     0034                              MOVLB 0x14                             
+  1740   6CB     003D                              MOVLB 0x1d                             
+  1741   6CC     0043                                                                     
+  1742   6CD     004D                                                                     
+  1743   6CE     0056                                                                     
+  1744   6CF     0060                                                                     
+  1745   6D0     006A                                                                     
+  1746   6D1     0077                                                                     
+  1747   6D2     0084                              MOVWF FSR0L                            
+  1748   6D3     0091                              MOVWF PIR1                             
+  1749   6D4     00A1                              MOVWF 0x21                             
+  1750   6D5     00A9                              MOVWF 0x29                             
+  1751   6D6     00B3                              MOVWF 0x33                             
+  1752   6D7     00BD                              MOVWF 0x3d                             
+  1753   6D8     00C0                              MOVWF FLAG_LOW                         
+  1754   6D9     00CA                              MOVWF 0x4a                             
+  1755   6DA     00DF                              MOVWF 0x5f                             
+  1756   6DB     00F0                              MOVWF LED_STATE                        
+  1757   6DC     0101                              CLRW                                   
+  1758   6DD     011E                                                                     
+  1759   6DE     0130                                                                     
+  1760   6DF     014C                                                                     
+  1761   6E0     0100                              CLRW                                   
+  1762   6E1     0120                                                                     
+  1763   6E2     0140                                                                     
+  1764   6E3     015F                                                                     
+  1765   6E4     017C                                                                     
+  1766   6E5     01A0                              CLRF PORTC_WHITE1_LO                   
+  1767   6E6     01BF                              CLRF 0x3f                              
+  1768   6E7     01E0                              CLRF 0x60                              
+  1769   6E8     0200                              SUBWF INDF0, W                         
+  1770   6E9     0221                              SUBWF 0x21, W                          
+  1771   6EA     024B                              SUBWF 0x4b, W                          
+  1772   6EB     026E                              SUBWF 0x6e, W                          
+  1773   6EC     0290                              SUBWF LED_STATE_WHITE_MASK, F          
+  1774   6ED     02B8                              SUBWF PORTC_WHITE3_HI, F               
+  1775   6EE     02DE                              SUBWF 0x5e, F                          
+  1776   6EF     0301                              DECF INDF1, W                          
+  1777   6F0     032C                              DECF 0x2c, W                           
+  1778   6F1     0358                              DECF 0x58, W                           
+  1779   6F2     037F                              DECF W2, W                             
+  1780   6F3     03AB                              DECF 0x2b, F                           
+  1781   6F4     03D6                              DECF 0x56, F                           
+  1782   6F5     0406                              IORWF FSR1L, W                         
+  1783   6F6     0432                              IORWF 0x32, W                          
+  1784   6F7     0461                              IORWF 0x61, W                          
+  1785   6F8     0492                              IORWF PIR2, F                          
+  1786   6F9     04C3                              IORWF ADCON1_ILED, F                   
+  1787   6FA     04F6                              IORWF OFF_TIMER_H, F                   
+  1788   6FB     0529                              ANDWF 0x29, W                          
+  1789   6FC     0560                              ANDWF 0x60, W                          
+  1790   6FD     059D                              ANDWF 0x1d, F                          
+  1791   6FE     05D6                              ANDWF 0x56, F                          
+  1792   6FF     0616                              XORWF TMR1, W                          
+  1793   700     040D                              IORWF 0xd, W                           
+  1794   701     0441                              IORWF 0x41, W                          
+  1795   702     0471                              IORWF DEVICE_STATE, W                  
+  1796   703     04A0                              IORWF PORTC_WHITE1_LO, F               
+  1797   704     04D1                              IORWF 0x51, F                          
+  1798   705     0504                              ANDWF FSR0L, W                         
+  1799   706     0533                              ANDWF 0x33, W                          
+  1800   707     0565                              ANDWF 0x65, W                          
+  1801   708     0596                              ANDWF TMR1, F                          
+  1802   709     05C7                              ANDWF 0x47, F                          
+  1803   70A     05F8                              ANDWF ILED_AVERAGE_M, F                
+  1804   70B     062C                              XORWF 0x2c, W                          
+  1805   70C     0660                              XORWF 0x60, W                          
+  1806   70D     0690                              XORWF LED_STATE_WHITE_MASK, F          
+  1807   70E     06C6                              XORWF 0x46, F                          
+  1808   70F     06F9                              XORWF ILED_AVERAGE_H, F                
+  1809   710     0737                              ADDWF 0x37, W                          
+  1810   711     076E                              ADDWF 0x6e, W                          
+  1811   712     07A2                              ADDWF 0x22, F                          
+  1812   713     07D6                              ADDWF 0x56, F                          
+  1813   714     0815                              MOVF TMR0, W                           
+  1814   715     084C                              MOVF 0x4c, W                           
+  1815   716     0888                              MOVF BSR, F                            
+  1816   717     08C6                              MOVF 0x46, F                           
+  1817   718     0903                              COMF STATUS, W                         
+  1818   719     0944                              COMF 0x44, W                           
+  1819   71A     0983                              COMF STATUS, F                         
+  1820   71B     09C6                              COMF 0x46, F                           
+  1821   71C     0A0A                              INCF PCLATH, W                         
+  1822   71D     0A52                              INCF 0x52, W                           
+  1823   71E     0A99                              INCF T1GCON, F                         
+  1824   71F     0AE5                              INCF 0x65, F                           
+  1825   720     0010                              MOVIW ++FSR0                           
+  1826   721     0010                              MOVIW ++FSR0                           
+  1827   722     0010                              MOVIW ++FSR0                           
+  1828   723     0010                              MOVIW ++FSR0                           
+  1829   724     0010                              MOVIW ++FSR0                           
+  1830   725     0010                              MOVIW ++FSR0                           
+  1831   726     0010                              MOVIW ++FSR0                           
+  1832   727     0010                              MOVIW ++FSR0                           
+  1833   728     0010                              MOVIW ++FSR0                           
+  1834   729     0010                              MOVIW ++FSR0                           
+  1835   72A     0010                              MOVIW ++FSR0                           
+  1836   72B     0010                              MOVIW ++FSR0                           
+  1837   72C     0010                              MOVIW ++FSR0                           
+  1838   72D     0010                              MOVIW ++FSR0                           
+  1839   72E     0010                              MOVIW ++FSR0                           
+  1840   72F     0010                              MOVIW ++FSR0                           
+  1841   730     0010                              MOVIW ++FSR0                           
+  1842   731     0010                              MOVIW ++FSR0                           
+  1843   732     0010                              MOVIW ++FSR0                           
+  1844   733     0010                              MOVIW ++FSR0                           
+  1845   734     0010                              MOVIW ++FSR0                           
+  1846   735     0010                              MOVIW ++FSR0                           
+  1847   736     0010                              MOVIW ++FSR0                           
+  1848   737     0010                              MOVIW ++FSR0                           
+  1849   738     0010                              MOVIW ++FSR0                           
+  1850   739     0010                              MOVIW ++FSR0                           
+  1851   73A     0018                              MOVWI ++FSR0                           
+  1852   73B     0020                              MOVLB 0                                
+  1853   73C     0020                              MOVLB 0                                
+  1854   73D     0020                              MOVLB 0                                
+  1855   73E     0021                              MOVLB 0x1                              
+  1856   73F     002E                              MOVLB 0xe                              
+  1857   740     0020                              MOVLB 0                                
+  1858   741     0020                              MOVLB 0                                
+  1859   742     002C                              MOVLB 0xc                              
+  1860   743     0033                              MOVLB 0x13                             
+  1861   744     0040                                                                     
+  1862   745     004E                                                                     
+  1863   746     0061                                                                     
+  1864   747     0079                                                                     
+  1865   748     0094                              MOVWF PORTC_RED2_HI                    
+  1866   749     00B8                              MOVWF PORTC_WHITE3_HI                  
+  1867   74A     00E1                              MOVWF 0x61                             
+  1868   74B     0113                                                                     
+  1869   74C     0151                                                                     
+  1870   74D     019E                              CLRF CPSCON0                           
+  1871   74E     01E5                              CLRF 0x65                              
+  1872   74F     023A                              SUBWF 0x3a, W                          
+  1873   750     0291                              SUBWF PIR1, F                          
+  1874   751     02F5                              SUBWF OFF_TIMER_L, F                   
+  1875   752     0357                              DECF 0x57, W                           
+  1876   753     03C9                              DECF 0x49, F                           
+  1877   754     043C                              IORWF 0x3c, W                          
+  1878   755     04AE                              IORWF 0x2e, F                          
+  1879   756     052C                              ANDWF 0x2c, W                          
+  1880   757     05A9                              ANDWF 0x29, F                          
+  1881   758     062F                              XORWF 0x2f, W                          
+  1882   759     06B8                              XORWF PORTC_WHITE3_HI, F               
+  1883   75A     0744                              ADDWF 0x44, W                          
+  1884   75B     07D9                              ADDWF 0x59, F                          
+  1885   75C     085D                              MOVF 0x5d, W                           
+  1886   75D     08C6                              MOVF 0x46, F                           
+  1887   75E     0908                              COMF BSR, W                            
+  1888   75F     092D                              COMF 0x2d, W                           
+  1889   760     044A                              IORWF 0x4a, W                          
+  1890   761     04C2                              IORWF 0x42, F                          
+  1891   762     0543                              ANDWF ADCON1_ILED, W                   
+  1892   763     05E8                              ANDWF 0x68, F                          
+  1893   764     0644                              XORWF 0x44, W                          
+  1894   765     06DF                              XORWF 0x5f, F                          
+  1895   766     076B                              ADDWF 0x6b, W                          
+  1896   767     07C8                              ADDWF 0x48, F                          
+  1897   768     087F                              MOVF W2, W                             
+  1898   769     08E4                              MOVF LP_TIME, F                        
+  1899   76A     0920                              COMF PORTC_WHITE1_LO, W                
+  1900   76B     0940                              COMF FLAG_LOW, W                       
+  1901   76C     0951                              COMF 0x51, W                           
+  1902   76D     09D1                              COMF 0x51, F                           
+  1903   76E     0A71                              INCF DEVICE_STATE, W                   
+  1904   76F     0AF7                              INCF ILED_AVERAGE_L, F                 
+  1905   770     0B80                              DECFSZ INDF0, F                        
+  1906   771     0C14                              RRF PORTC_RED2_HI, W                   
+  1907   772     0CA3                              RRF 0x23, F                            
+  1908   773     0D33                              RLF 0x33, W                            
+  1909   774     0DC6                              RLF 0x46, F                            
+  1910   775     0E5B                              SWAPF 0x5b, W                          
+  1911   776     0EF5                              SWAPF OFF_TIMER_L, F                   
+  1912   777     0F93                              INCFSZ 0x13, F                         
+  1913   778     1033                              BCF 0x33, 0                            
+  1914   779     10CC                              BCF 0x4c, 0x1                          
+  1915   77A     1171                              BCF DEVICE_STATE, 0x2                  
+  1916   77B     1218                              BCF T1CON, 0x4                         
+  1917   77C     12C2                              BCF 0x42, 0x5                          
+  1918   77D     1375                              BCF OFF_TIMER_L, 0x6                   
+  1919   77E     1424                              BSF 0x24, 0                            
+  1920   77F     14DC                              BSF 0x5c, 0x1                          
+  1921   780     0010                              MOVIW ++FSR0                           
+  1922   781     0010                              MOVIW ++FSR0                           
+  1923   782     0010                              MOVIW ++FSR0                           
+  1924   783     0010                              MOVIW ++FSR0                           
+  1925   784     0010                              MOVIW ++FSR0                           
+  1926   785     0011                              MOVIW --FSR0                           
+  1927   786     0018                              MOVWI ++FSR0                           
+  1928   787     0020                              MOVLB 0                                
+  1929   788     0020                              MOVLB 0                                
+  1930   789     0021                              MOVLB 0x1                              
+  1931   78A     002D                              MOVLB 0xd                              
+  1932   78B     0037                              MOVLB 0x17                             
+  1933   78C     0044                                                                     
+  1934   78D     0056                                                                     
+  1935   78E     0067                              TRIS FSR1H                             
+  1936   78F     0081                              MOVWF INDF1                            
+  1937   790     009B                              MOVWF PR2                              
+  1938   791     00B8                              MOVWF PORTC_WHITE3_HI                  
+  1939   792     00D3                              MOVWF 0x53                             
+  1940   793     00E0                              MOVWF 0x60                             
+  1941   794     00E0                              MOVWF 0x60                             
+  1942   795     00FA                              MOVWF ADC_OFFSET_L                     
+  1943   796     012F                                                                     
+  1944   797     015E                                                                     
+  1945   798     0192                              CLRF PIR2                              
+  1946   799     01C3                              CLRF ADCON1_ILED                       
+  1947   79A     0202                              SUBWF PCL, W                           
+  1948   79B     0241                              SUBWF 0x41, W                          
+  1949   79C     0283                              SUBWF STATUS, F                        
+  1950   79D     02C9                              SUBWF 0x49, F                          
+  1951   79E     0311                              DECF PIR1, W                           
+  1952   79F     0360                              DECF 0x60, W                           
+  1953   7A0     00E0                              MOVWF 0x60                             
+  1954   7A1     00F8                              MOVWF ILED_AVERAGE_M                   
+  1955   7A2     0131                                                                     
+  1956   7A3     0161                                                                     
+  1957   7A4     0195                              CLRF TMR0                              
+  1958   7A5     01D1                              CLRF 0x51                              
+  1959   7A6     020A                              SUBWF PCLATH, W                        
+  1960   7A7     0242                              SUBWF 0x42, W                          
+  1961   7A8     0280                              SUBWF INDF0, F                         
+  1962   7A9     02BD                              SUBWF 0x3d, F                          
+  1963   7AA     02F4                              SUBWF SW_TIMER, F                      
+  1964   7AB     0332                              DECF 0x32, W                           
+  1965   7AC     0372                              DECF SW_TRANSIENT, W                   
+  1966   7AD     03B2                              DECF 0x32, F                           
+  1967   7AE     03F7                              DECF ILED_AVERAGE_L, F                 
+  1968   7AF     0433                              IORWF 0x33, W                          
+  1969   7B0     0476                              IORWF OFF_TIMER_H, W                   
+  1970   7B1     04B7                              IORWF 0x37, F                          
+  1971   7B2     04FF                              IORWF W2, F                            
+  1972   7B3     0540                              ANDWF FLAG_LOW, W                      
+  1973   7B4     0588                              ANDWF BSR, F                           
+  1974   7B5     05CF                              ANDWF 0x4f, F                          
+  1975   7B6     0614                              XORWF PORTC_RED2_HI, W                 
+  1976   7B7     065A                              XORWF 0x5a, W                          
+  1977   7B8     06A2                              XORWF 0x22, F                          
+  1978   7B9     06F0                              XORWF LED_STATE, F                     
+  1979   7BA     073E                              ADDWF 0x3e, W                          
+  1980   7BB     078E                              ADDWF PORTC, F                         
+  1981   7BC     07DE                              ADDWF 0x5e, F                          
+  1982   7BD     0833                              MOVF 0x33, W                           
+  1983   7BE     088A                              MOVF PCLATH, F                         
+  1984   7BF     08E0                              MOVF 0x60, F                           
+  1985   7C0     3FFF                              MOVWI [-1]FSR1                         
+  1986   7C1     3FFF                              MOVWI [-1]FSR1                         
+  1987   7C2     3FFF                              MOVWI [-1]FSR1                         
+  1988   7C3     3FFF                              MOVWI [-1]FSR1                         
+  1989   7C4     3FFF                              MOVWI [-1]FSR1                         
+  1990   7C5     3FFF                              MOVWI [-1]FSR1                         
+  1991   7C6     3FFF                              MOVWI [-1]FSR1                         
+  1992   7C7     3FFF                              MOVWI [-1]FSR1                         
+  1993   7C8     3FFF                              MOVWI [-1]FSR1                         
+  1994   7C9     3FFF                              MOVWI [-1]FSR1                         
+  1995   7CA     3FFF                              MOVWI [-1]FSR1                         
+  1996   7CB     3FFF                              MOVWI [-1]FSR1                         
+  1997   7CC     3FFF                              MOVWI [-1]FSR1                         
+  1998   7CD     3FFF                              MOVWI [-1]FSR1                         
+  1999   7CE     3FFF                              MOVWI [-1]FSR1                         
+  2000   7CF     3FFF                              MOVWI [-1]FSR1                         
+  2001   7D0     3FFF                              MOVWI [-1]FSR1                         
+  2002   7D1     3FFF                              MOVWI [-1]FSR1                         
+  2003   7D2     3FFF                              MOVWI [-1]FSR1                         
+  2004   7D3     3FFF                              MOVWI [-1]FSR1                         
+  2005   7D4     3FFF                              MOVWI [-1]FSR1                         
+  2006   7D5     3FFF                              MOVWI [-1]FSR1                         
+  2007   7D6     3FFF                              MOVWI [-1]FSR1                         
+  2008   7D7     3FFF                              MOVWI [-1]FSR1                         
+  2009   7D8     3FFF                              MOVWI [-1]FSR1                         
+  2010   7D9     3FFF                              MOVWI [-1]FSR1                         
+  2011   7DA     3FFF                              MOVWI [-1]FSR1                         
+  2012   7DB     3FFF                              MOVWI [-1]FSR1                         
+  2013   7DC     3FFF                              MOVWI [-1]FSR1                         
+  2014   7DD     3FFF                              MOVWI [-1]FSR1                         
+  2015   7DE     3FFF                              MOVWI [-1]FSR1                         
+  2016   7DF     3FFF                              MOVWI [-1]FSR1                         
+  2017   7E0     3FFF                              MOVWI [-1]FSR1                         
+  2018   7E1     3FFF                              MOVWI [-1]FSR1                         
+  2019   7E2     3FFF                              MOVWI [-1]FSR1                         
+  2020   7E3     3FFF                              MOVWI [-1]FSR1                         
+  2021   7E4     3FFF                              MOVWI [-1]FSR1                         
+  2022   7E5     3FFF                              MOVWI [-1]FSR1                         
+  2023   7E6     3FFF                              MOVWI [-1]FSR1                         
+  2024   7E7     3FFF                              MOVWI [-1]FSR1                         
+  2025   7E8     3FFF                              MOVWI [-1]FSR1                         
+  2026   7E9     3FFF                              MOVWI [-1]FSR1                         
+  2027   7EA     3FFF                              MOVWI [-1]FSR1                         
+  2028   7EB     3FFF                              MOVWI [-1]FSR1                         
+  2029   7EC     3FFF                              MOVWI [-1]FSR1                         
+  2030   7ED     3FFF                              MOVWI [-1]FSR1                         
+  2031   7EE     3FFF                              MOVWI [-1]FSR1                         
+  2032   7EF     3FFF                              MOVWI [-1]FSR1                         
+  2033   7F0     3FFF                              MOVWI [-1]FSR1                         
+  2034   7F1     3FFF                              MOVWI [-1]FSR1                         
+  2035   7F2     3FFF                              MOVWI [-1]FSR1                         
+  2036   7F3     3FFF                              MOVWI [-1]FSR1                         
+  2037   7F4     3FFF                              MOVWI [-1]FSR1                         
+  2038   7F5     3FFF                              MOVWI [-1]FSR1                         
+  2039   7F6     3FFF                              MOVWI [-1]FSR1                         
+  2040   7F7     3FFF                              MOVWI [-1]FSR1                         
+  2041   7F8     3FFF                              MOVWI [-1]FSR1                         
+  2042   7F9     3FFF                              MOVWI [-1]FSR1                         
+  2043   7FA     3FFF                              MOVWI [-1]FSR1                         
+  2044   7FB     3FFF                              MOVWI [-1]FSR1                         
+  2045   7FC     3FFF                              MOVWI [-1]FSR1                         
+  2046   7FD     3FFF                              MOVWI [-1]FSR1                         
+  2047   7FE     3FFF                              MOVWI [-1]FSR1                         
+  2048   7FF     3FFF                              MOVWI [-1]FSR1                         
